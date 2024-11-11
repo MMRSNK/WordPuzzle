@@ -1,0 +1,40 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "9676533b-8074-4b0d-a872-85b04a91a1ab",
+            "actions": [
+                {
+                    "name": "TouchPosition",
+                    "type": "Value",
+                    "id": "af8d4621-5e64-4086-8e24-0b7fd1a179b6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "77cb2672-94e9-4edf-a1e4-b2673b5382b8",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Input",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Input",
+            "bindingGroup": "Input",
+            "devices": []
+        }
+    ]
+}
