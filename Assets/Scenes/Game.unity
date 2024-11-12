@@ -412,6 +412,7 @@ MonoBehaviour:
   _letterLayout: {fileID: 1043270122}
   _wordChecker: {fileID: 345475943}
   _hintBtn: {fileID: 1718224202}
+  _levelButtonsUI: {fileID: 1230582294}
 --- !u!1 &181599284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,8 +2396,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0014500022, y: -0.000100016594, z: 0}
-    m_Extent: {x: 1.00525, y: 1.0023, z: 0}
+    m_Center: {x: 0.00090000033, y: 0.0009999871, z: 0}
+    m_Extent: {x: 0.99759996, y: 1.0079999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4368,6 +4369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelBtnPrefab: {fileID: 4318783011783533143, guid: 428b7774afdd0da4ca40c538af57770e, type: 3}
+  LevelButton2Prefab: {fileID: 6076375480328480832, guid: c8f737b5b1cf1c14f96a678c88426a91, type: 3}
   Container: {fileID: 488798681}
   levels:
   - {fileID: 11400000, guid: cf31a85622d514040b09f2cfe0df19fb, type: 2}
