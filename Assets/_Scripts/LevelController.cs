@@ -17,11 +17,17 @@ public class LevelController : Singleton<LevelController>
     private WordChecker _wordChecker;
     [SerializeField]
     private GameObject _hintBtn;
+    [SerializeField]
+    private LevelButtonsUI _levelButtonsUI;
 
     private float _levelTime;
     private bool _isPlaying;
     private bool _hintUsed;
     private int _currentLevel;
+    private void Start()
+    {
+        CreateLevelBtns();
+    }
     private void Update()
     {
         if (!_isPlaying)
@@ -41,11 +47,13 @@ public class LevelController : Singleton<LevelController>
         _wordChecker.OnLetterAdded -= WordChecker_OnLetterAdded;
         _wordChecker.OnWordChecked -= WordChecker_OnWordChecked;
     }
-    private void WordChecker_OnLevelCleared()
-    {
-        OnLevelCleared?.Invoke(_levelTime);
-    }
+    
     #region Loading actions
+    public void CreateLevelBtns()
+    {
+        var levelsJson = Resources.LoadAll<TextAsset>("Levels/");
+        _levelButtonsUI.CreateLevelBtns2(levelsJson.Length);
+    }
     public bool LoadLevel(int levelNum)
     {
         string levelToLoad = $"level_{levelNum}";
@@ -111,6 +119,10 @@ public class LevelController : Singleton<LevelController>
     public bool LoadNextLevel() => LoadLevel(_currentLevel + 1);
     #endregion
     #region WordChecker
+    private void WordChecker_OnLevelCleared()
+    {
+        OnLevelCleared?.Invoke(_levelTime);
+    }
     public void AddLetter(string letter)
     {
         _wordChecker.AddLetter(letter);
